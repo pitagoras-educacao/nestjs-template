@@ -1,0 +1,14 @@
+{
+  "name": "pitagoras-core",
+  "version": "0.0.0",
+  "description": "Manages core entities of the pitagoras project",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "author": "Letícia Aguiar",
+  "license": "PRIVATE",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
