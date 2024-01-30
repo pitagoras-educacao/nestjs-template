@@ -6,14 +6,18 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "lint": "eslint ./source --ext .ts",
-    "start:dev": "nodemon ./source/main.ts"
+    "start:dev": "nodemon ./source/main.ts",
+    "prepare": "husky"
   },
   "author": "Letícia Aguiar",
   "license": "PRIVATE",
   "devDependencies": {
+    "@commitlint/cli": "^18.6.0",
+    "@commitlint/config-conventional": "^18.6.0",
     "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/parser": "^6.20.0",
     "eslint": "^8.56.0",
+    "husky": "^9.0.7",
     "nodemon": "^3.0.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
