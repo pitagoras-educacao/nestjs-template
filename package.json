@@ -4,11 +4,21 @@
   "description": "Manages core entities of the pitagoras project",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "start:dev": "nodemon ./source/main.ts"
   },
   "author": "Letícia Aguiar",
   "license": "PRIVATE",
   "devDependencies": {
+    "nodemon": "^3.0.3",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.3.1",
+    "@nestjs/core": "^10.3.1",
+    "@nestjs/platform-express": "^10.3.1",
+    "reflect-metadata": "^0.2.1",
+    "rxjs": "^7.8.1"
   }
 }
