@@ -37,18 +37,12 @@ devDependencies:
   '@commitlint/config-conventional':
     specifier: ^18.6.0
     version: 18.6.0
+  '@pitagoras-educacao/eslint-config':
+    specifier: git@github.com:pitagoras-educacao/eslint-config.git#v1.0.0
+    version: github.com/pitagoras-educacao/eslint-config/d3e91994ad731fdb73c3e7656dc60b320603fd9d(@typescript-eslint/eslint-plugin@6.20.0)(@typescript-eslint/parser@6.20.0)(eslint@8.56.0)
   '@types/jest':
     specifier: ^29.5.11
     version: 29.5.11
-  '@typescript-eslint/eslint-plugin':
-    specifier: ^6.20.0
-    version: 6.20.0(@typescript-eslint/parser@6.20.0)(eslint@8.56.0)(typescript@5.3.3)
-  '@typescript-eslint/parser':
-    specifier: ^6.20.0
-    version: 6.20.0(eslint@8.56.0)(typescript@5.3.3)
-  eslint:
-    specifier: ^8.56.0
-    version: 8.56.0
   husky:
     specifier: ^9.0.7
     version: 9.0.7
@@ -4915,4 +4909,21 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: true
+
+  github.com/pitagoras-educacao/eslint-config/d3e91994ad731fdb73c3e7656dc60b320603fd9d(@typescript-eslint/eslint-plugin@6.20.0)(@typescript-eslint/parser@6.20.0)(eslint@8.56.0):
+    resolution: {tarball: https://codeload.github.com/pitagoras-educacao/eslint-config/tar.gz/d3e91994ad731fdb73c3e7656dc60b320603fd9d}
+    id: github.com/pitagoras-educacao/eslint-config/d3e91994ad731fdb73c3e7656dc60b320603fd9d
+    name: '@pitagoras-educacao/eslint-config'
+    version: 0.0.0
+    prepare: true
+    requiresBuild: true
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^6.20.0
+      '@typescript-eslint/parser': ^6.20.0
+      eslint: ^8.56.0
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 6.20.0(@typescript-eslint/parser@6.20.0)(eslint@8.56.0)(typescript@5.3.3)
+      '@typescript-eslint/parser': 6.20.0(eslint@8.56.0)(typescript@5.3.3)
+      eslint: 8.56.0
     dev: true
