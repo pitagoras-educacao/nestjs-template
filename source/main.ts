@@ -5,33 +5,33 @@ import { AppModule } from './app.module';
 
 async function main(): Promise<void>
 {
-    const app = await NestFactory.create(AppModule);
+	const app = await NestFactory.create(AppModule);
 
-    setupValidationPipe(app);
-    setupSwagger(app);
+	setupValidationPipe(app);
+	setupSwagger(app);
 
-    await app.listen(3000);
+	await app.listen(3000);
 }
 
 function setupSwagger(app: INestApplication): void
 {
-    const config = new DocumentBuilder()
-        .setTitle('NestJS API')
-        .setDescription('NestJS API description')
-        .setVersion('1.0')
-        .build();
+	const config = new DocumentBuilder()
+		.setTitle('NestJS API')
+		.setDescription('NestJS API description')
+		.setVersion('1.0')
+		.build();
 
-    const document = SwaggerModule.createDocument(app, config);
-    SwaggerModule.setup('docs', app, document);
+	const document = SwaggerModule.createDocument(app, config);
+	SwaggerModule.setup('docs', app, document);
 }
 
 function setupValidationPipe(app: INestApplication): void
 {
-    app.useGlobalPipes(new ValidationPipe({
-        transform: true,
-        whitelist: true,
-        forbidNonWhitelisted: true,
-    }));
+	app.useGlobalPipes(new ValidationPipe({
+		transform: true,
+		whitelist: true,
+		forbidNonWhitelisted: true,
+	}));
 }
 
 main();
